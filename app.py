@@ -5,6 +5,11 @@ import time  # Import the time module
 app = Flask(__name__)
 CORS(app)
 
+# GET route to display "Hello, World!"
+@app.route('/', methods=['GET'])
+def hello():
+    return "Hello, World!"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     # Check if the request contains the file
