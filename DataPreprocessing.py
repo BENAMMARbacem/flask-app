@@ -43,7 +43,7 @@ class DataPreprocessor:
         total_audio_time = AudioSegment.from_wav(audio_file).duration_seconds
 
         pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.1",
-                                            use_auth_token='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')
+                                            use_auth_token='token')
 
         if (self.print_cost):
             print(f"Start Diarization with {audio_file}")
